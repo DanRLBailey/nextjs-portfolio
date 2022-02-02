@@ -1,0 +1,85 @@
+@import "variables.scss";
+
+.navbar {
+  $size: 3rem;
+  $height: $size * 1.1547;
+  $margin: 0.3rem;
+  $f: calc(1.732 * $size + 4 * $margin - 1px);
+  
+  position: sticky;
+  top: 2vh;
+  right: 0;
+  display: flex;
+
+  .links {
+    max-width: 300px;
+    height: auto;
+    margin-left: auto;
+    font-size: 0;
+
+    li {
+      display: inline-flex;
+      filter: $hex-shadow;
+      height: $height;
+
+      div {
+        background: $background-colour;
+        width: $size;
+        margin: $margin;
+        height: $height;
+        font-size: initial;
+        clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+        margin-bottom: $margin - $size * 0.2885;
+        overflow: hidden;
+        position: relative;
+
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          line-height: $size * 1.1;
+          z-index: 1;
+        }
+
+        &:after {
+          background: transparent;
+          position: absolute;
+          top: -5%;
+          left: -5%;
+          width: 110%;
+          height: 110%;
+          content: "";
+          border-radius: $size;
+          box-shadow: $box-shadow;
+          transition: $transition;
+        }
+      }
+
+      &:hover {
+        filter: none;
+
+
+        div {
+          &:after {
+            box-shadow: $box-shadow-inset;
+          }
+        }
+      }
+    }
+
+    .spacer {
+      opacity: 0;
+    }
+
+    &:before {
+      content: "";
+      width: calc($size/2) + $margin;
+      float: left;
+      height: 120%;
+      shape-outside: repeating-linear-gradient(#0000 0 calc($f - 3px), #000 0 $f);
+    }
+  }
+}

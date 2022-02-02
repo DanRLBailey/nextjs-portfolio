@@ -1,0 +1,17 @@
+//TRANSITIONS
+$transition: 0.2s ease-out;
+
+//COLOURS
+$background-colour: #444444;
+$font-colour: white;
+
+//SHADOWS
+$box-shadow: 5px 5px 12px darken($background-colour, 10%), -5px -5px 12px lighten($background-colour, 10%), inset 0px 0px 0px darken($background-colour, 10%), inset -0px -0px 0px lighten($background-colour, 10%);
+
+$box-shadow-inset: 0 0 0 darken($background-colour, 10%), -0 -0 0 lighten($background-colour, 10%), inset 5px 5px 12px darken($background-colour, 10%), inset -5px -5px 12px lighten($background-colour, 10%);
+
+$hex-shadow: drop-shadow(4px 4px 4px darken($background-colour, 10%)) drop-shadow(-2px -2px 4px lighten($background-colour, 10%));
+
+$box-shadow-card: 0px 10px 20px -15px darken($background-colour, 13%), 0px -10px 20px -15px lighten($background-colour, 13%), inset 0px 0px 0px darken($background-colour, 10%), inset -0px -0px 0px lighten($background-colour, 10%);
+
+$box-shadow-card-inset: inset 0px 10px 20px -15px darken($background-colour, 13%), inset 0px -10px 20px -15px lighten($background-colour, 13%), inset 0px 0px 0px darken($background-colour, 10%), inset -0px -0px 0px lighten($background-colour, 10%);

@@ -1,0 +1,38 @@
+@import "variables.scss";
+
+.projects {
+    .cards {
+        width: 70%;
+        margin: 0 auto;
+
+        .card {
+            padding: 1rem 4rem;
+            margin-bottom: 3rem;
+
+            &:nth-of-type(2n) {
+                box-shadow: $box-shadow-card;
+            }
+
+            &:nth-of-type(2n - 1) {
+                box-shadow: $box-shadow-card-inset;
+            }
+
+            .tech {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 1rem;
+
+                .technologies {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 8rem;
+                    height: 2rem;
+                    border-radius: 1rem;
+                    margin-right: 1rem;
+                    box-shadow: $box-shadow;
+                }
+            }
+        }
+    }
+}
