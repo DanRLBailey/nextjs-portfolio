@@ -1,0 +1,176 @@
+[
+    {
+        "Name": "Final Year Project",
+        "Tagline": "Puzzle game for the motor impaired",
+        "Descriptions": [
+            "Focus on accessibility, specifically the motor impaired",
+            "Gameplay designed for a single input",
+            "Demo could be played with a button or microphone, and eye trackers were planned"
+        ],
+        "Technologies": [
+            "Games",
+            "C#",
+            "Unity"
+        ],
+        "Links": [
+            {
+                "Site": "Github",
+                "Link": "https://github.com/DanRLBailey/final-year-project"
+            }
+        ],
+        "UseModal": true,
+        "VideoName": ""
+    },
+    {
+        "Name": "Vue Calendar Holidays",
+        "Tagline": "Most holidays for the least amount booked",
+        "Technologies": [
+            "Web",
+            "VueJS",
+            "SASS",
+            "REST"
+        ],
+        "Links": [
+            {
+                "Site": "Github",
+                "Link": "https://github.com/DanRLBailey/days-to-book"
+            },
+            {
+                "Site": "Demo",
+                "Link": "https://daystobook.netlify.app/"
+            }
+        ],
+        "UseModal": false,
+        "VideoName": ""
+    },
+    {
+        "Name": "NextJS Portfolio",
+        "Tagline": "This website!",
+        "Technologies": [
+            "Web",
+            "React",
+            "NectJS",
+            "SASS"
+        ],
+        "Links": [
+            {
+                "Site": "Github",
+                "Link": "https://github.com/DanRLBailey/nextjs-portfolio"
+            }
+        ],
+        "UseModal": false,
+        "VideoName": ""
+    },
+    {
+        "Name": "Rhythm-Based Runner",
+        "Tagline": "",
+        "Descriptions": [
+            "Rhythm game designed for mobile",
+            "Made as a project for a university module",
+            "Used monetization techniques such as in-game adverts and microtransactions",
+            "Music notes originally spawned via an algorithm to detect the best times, though this was scrapped"
+        ],
+        "Technologies": [
+            "Games",
+            "C#",
+            "Unity"
+        ],
+        "Links": [
+            {
+                "Site": "Github",
+                "Link": "https://github.com/DanRLBailey/mobile-rhythm-runner"
+            }
+        ],
+        "UseModal": true,
+        "VideoName": ""
+    },
+    {
+        "Name": "Technical Games Production",
+        "Tagline": "",
+        "Descriptions": [],
+        "Technologies": [
+            "Games",
+            "C++",
+            "UE4"
+        ],
+        "Links": [
+            {
+                "Site": "Github",
+                "Link": "https://github.com/DanRLBailey/TGPSolo"
+            }
+        ],
+        "UseModal": true,
+        "VideoName": ""
+    },
+    {
+        "Name": "Tower Defence",
+        "Tagline": "",
+        "Descriptions": [],
+        "Technologies": [
+            "Games",
+            "C++",
+            "UE4",
+            "Blueprints"
+        ],
+        "Links": [
+            {
+                "Site": "Github",
+                "Link": "https://github.com/DanRLBailey/GDTD"
+            }
+        ],
+        "UseModal": true,
+        "VideoName": ""
+    },
+    {
+        "Name": "D'Litas",
+        "Tagline": "E-Commerce website for a cake company",
+        "Technologies": [
+            "Web",
+            "HTML",
+            "CSS",
+            "Wordpress"
+        ],
+        "Links": [
+            {
+                "Site": "Demo",
+                "Link": "https://dlitas.netlify.app/"
+            }
+        ],
+        "UseModal": false,
+        "VideoName": ""
+    },
+    {
+        "Name": "FOGGS",
+        "Tagline": "Fundamentals of Game and Graphics Software",
+        "Descriptions": [],
+        "Technologies": [
+            "Games",
+            "C++",
+            "OpenGL"
+        ],
+        "Links": [],
+        "UseModal": true,
+        "VideoName": ""
+    },
+    {
+        "Name": "Neon Nova",
+        "Tagline": "Marketing exercise for a group game",
+        "Technologies": [
+            "Web",
+            "HTML",
+            "CSS"
+        ],
+        "Links": [
+            {
+                "Site": "Github",
+                "Link": "https://github.com/DanRLBailey/NeonNovaWebsite"
+            },
+            {
+                "Site": "Demo",
+                "Link": "https://neon-nova.netlify.app/"
+            }
+        ],
+        "UseModal": false,
+        "VideoName": ""
+    }
+]
