@@ -1,37 +1,248 @@
 @import "variables.scss";
 
 .projects {
-    .cards {
-        width: 70%;
-        margin: 0 auto;
+    .cardContainer {
+        //width: 70vw;
+        box-shadow: $box-shadow-inset;
+        margin: auto -15vw 3rem;
+        background: $background-colour-darker;
 
         .card {
-            padding: 1rem 4rem;
-            margin-bottom: 3rem;
+            padding: 2rem 35vw;
+            transition: $transition;
+            display: flex;
+            flex-direction: row;
 
-            &:nth-of-type(2n) {
-                box-shadow: $box-shadow-card;
+            &:last-of-type {
+                margin-bottom: 1rem;
             }
 
-            &:nth-of-type(2n - 1) {
-                box-shadow: $box-shadow-card-inset;
+            .cell {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    font-size: 2rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                .tagline {
+                    margin-bottom: 2rem;
+                }
+
+                .tech {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 1rem;
+
+                    .technologies {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 2rem;
+                        color: $font-colour-dark;
+                        font-weight: bold;
+
+                        &:not(:last-of-type) {
+                            &:after {
+                                content: "•";
+                                font-size: 0.5rem;
+                                margin: auto 0.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .links {
+                    $hexSize: 3rem;
+                    $height: $hexSize * 1.1547;
+                    $margin: 0.3rem;
+                    $f: calc(1.732 * $hexSize + 4 * $margin - 1px);
+                    $size: 6rem;
+
+                    display: flex;
+                    flex-direction: row;
+
+                    margin: auto 0 auto auto;
+
+                    .link {
+                        filter: $hex-shadow-half;
+                        width: $size;
+                        height: $size;
+                        transition: $transition;
+                        line-height: $size;
+                        
+                        text-align: center;
+                        margin-right: 1rem;
+                        position: relative;
+                        cursor: pointer;
+                        
+                        .linkHex {
+                            @include absolute(110%, -5%);
+                            background: $background-colour;
+                            clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+                            line-height: $size * 1.3;
+
+                            &:after {
+                                @include absolute(110%, -5%);
+                                border-radius: 50%;
+                                box-shadow: box-shadow-none;
+                            }
+
+                            img {
+                                transition: $transition;
+                                transform: scale(1);
+                            }
+                        }
+
+                        &:hover {
+                            filter: $hex-shadow-half-reverse;
+
+                            .linkHex {
+                                background: $background-colour-hover;
+                                transform: translateY(5px);
+
+                                img {
+                                    transform: scale(0.9);
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
-            .tech {
+            .info {
                 display: flex;
                 flex-direction: row;
-                margin-bottom: 1rem;
+                justify-content: center;
+                align-items: center;
 
-                .technologies {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 8rem;
-                    height: 2rem;
-                    border-radius: 1rem;
-                    margin-right: 1rem;
-                    box-shadow: $box-shadow;
+                ul {
+                    li {
+                        list-style: none;
+                        margin-right: 2rem;
+                        padding: 1rem;
+
+                        &:nth-of-type(2n - 1) {
+                            background-color: $background-colour-lighter;
+                        }
+                    }
                 }
+                
+                video {
+                    width: 50%;
+                    height: auto;
+                    box-shadow: $box-shadow-card;
+                    border-radius: 2rem 0 2rem 0;
+                }
+            }
+        }
+    }
+
+    .toggleContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2rem;
+
+        button {
+            cursor: pointer;
+            margin: auto;
+            background-color: $background-colour-lighter;
+            border: none;
+            color: white;
+            box-shadow: $box-shadow;
+            border-radius: 0.5rem;
+            transition: $transition;
+            min-width: 10rem;
+            min-height: 2rem;
+            padding: 1rem;
+
+            span {
+                transition: $transition;
+                width: 100%;
+                height: 100%;
+                font-size: 0.9rem;
+            }
+
+            &:hover {
+                background-color: $background-colour-hover;
+                box-shadow: $box-shadow-inset-half;
+                padding: 1.05rem;
+
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    .modalContainer {
+        @include absolute(100%, 0);
+        position: fixed;
+        padding: 7.5rem;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+
+        .modal {
+            height: 100%;
+            background: $background-colour;
+            display: flex;
+            flex-direction: row;
+            border-radius: 1rem;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+
+            > div:not(.close) {
+                flex: 1;
+                margin-right: 0;
+                border-radius: 1rem;
+                margin: 3rem;
+
+                display: flex;
+                flex-direction: row;
+                
+                div {
+                    flex: 1;
+                    padding: 3rem;
+                    
+                    video {
+                        width: 100%;
+                    }
+                    
+                    &.info {
+                        flex: 0.5;
+                    }
+                }
+            }
+
+            .close {
+                padding: 1rem 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .card {
+        padding: 2rem 20vw !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem 20vw;
+        flex-direction: column !important;
+
+        .cell {
+            text-align: center;
+            width: 100% !important;
+            align-items: center;
+            justify-content: center;
+
+            .links {
+                margin: auto !important;
             }
         }
     }

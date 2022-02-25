@@ -1,17 +1,54 @@
 //TRANSITIONS
-$transition: 0.2s ease-out;
+$transition: 0.15s ease-out;
 
 //COLOURS
 $background-colour: #444444;
+$background-colour-darker: darken($background-colour, 2%);
+$background-colour-lighter: lighten($background-colour, 1%);
+$background-colour-hover: darken($background-colour, 3%);
 $font-colour: white;
+$font-colour-dark: grey;
 
 //SHADOWS
-$box-shadow: 5px 5px 12px darken($background-colour, 10%), -5px -5px 12px lighten($background-colour, 10%), inset 0px 0px 0px darken($background-colour, 10%), inset -0px -0px 0px lighten($background-colour, 10%);
+$box-shadow: 0px 7px 0px darken($background-colour, 5%), 0px -7px 0px lighten($background-colour, 3%), inset 0px 0px 0px darken($background-colour, 5%), inset 0px -0px 0px lighten($background-colour, 3%);
 
-$box-shadow-inset: 0 0 0 darken($background-colour, 10%), -0 -0 0 lighten($background-colour, 10%), inset 5px 5px 12px darken($background-colour, 10%), inset -5px -5px 12px lighten($background-colour, 10%);
+$box-shadow-all: inset 0px 8px 0px darken($background-colour, 5%), inset -0px -8px 0px lighten($background-colour, 3%);
 
-$hex-shadow: drop-shadow(4px 4px 4px darken($background-colour, 10%)) drop-shadow(-2px -2px 4px lighten($background-colour, 10%));
+$box-shadow-inset: inset 0px 14px 0px darken($background-colour, 5%), inset 0px -14px 0px lighten($background-colour, 3%);
 
-$box-shadow-card: 0px 10px 20px -15px darken($background-colour, 13%), 0px -10px 20px -15px lighten($background-colour, 13%), inset 0px 0px 0px darken($background-colour, 10%), inset -0px -0px 0px lighten($background-colour, 10%);
+$box-shadow-inset-half: 0px 0px 0px darken($background-colour, 5%), 0px -0px 0px lighten($background-colour, 3%), inset 0px 7px 0px darken($background-colour, 5%), inset 0px -7px 0px lighten($background-colour, 3%);
 
-$box-shadow-card-inset: inset 0px 10px 20px -15px darken($background-colour, 13%), inset 0px -10px 20px -15px lighten($background-colour, 13%), inset 0px 0px 0px darken($background-colour, 10%), inset -0px -0px 0px lighten($background-colour, 10%);
+$box-shadow-none: 0px 0px 0px darken($background-colour, 5%), 0px -0px 0px lighten($background-colour, 3%),
+inset 0px 0px 0px darken($background-colour, 5%), inset 0px -0px 0px lighten($background-colour, 3%);
+
+$hex-shadow: drop-shadow(0px 14px 0px darken($background-colour, 5%))
+    drop-shadow(0px -14px 0px lighten($background-colour, 3%));
+
+$hex-shadow-half: drop-shadow(0px 7px 0px darken($background-colour, 5%))
+    drop-shadow(0px -7px 0px lighten($background-colour, 3%));
+
+$hex-shadow-half-reverse: drop-shadow(0px -7px 0px darken($background-colour, 5%))
+    drop-shadow(0px 7px 0px lighten($background-colour, 3%));
+    
+$hex-shadow-quarter: drop-shadow(0px 3.5px 0px darken($background-colour, 5%))
+    drop-shadow(0px -3.5px 0px lighten($background-colour, 3%));
+
+$hex-shadow-quarter-reverse: drop-shadow(0px -3.5px 0px darken($background-colour, 5%))
+    drop-shadow(0px 3.5px 0px lighten($background-colour, 3%));
+
+$text-shadow: 2px 2px 2px darken($background-colour, 5%), -2px -2px 2px lighten($background-colour, 3%);
+
+$box-shadow-card: 8px 8px 0px darken($background-colour, 5%), -0px -0px 0px lighten($background-colour, 3%);
+
+// $box-shadow-card-inset: 0px 10px 20px -15px darken($background-colour, 13%), 0px -10px 20px -15px lighten($background-colour, 13%), inset 0px 0px 0px darken($background-colour, 10%), inset -0px -0px 0px lighten($background-colour, 10%) inset 0px 10px 20px -10px darken($background-colour, 10%), inset 0px -10px 20px -10px lighten($background-colour, 10%);
+
+//MIXINS
+@mixin absolute($size, $pos) {
+    position: absolute;
+    top: $pos;
+    left: $pos;
+    width: $size;
+    height: $size;
+    content: "";
+    transition: $transition;
+}

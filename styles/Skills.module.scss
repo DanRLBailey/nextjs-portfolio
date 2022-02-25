@@ -1,0 +1,53 @@
+@import "variables.scss";
+
+.skills {
+  padding: 18vh 0;
+  overflow: hidden;
+
+  .cards {
+    $gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7.5vh 10vw;
+    margin: $gap auto;
+
+    box-shadow: $box-shadow-all;
+    background: $background-colour-darker;
+    border-radius: 2.5rem 0 2.5rem 0;
+    max-width: 60%;
+    
+    .card {
+      border-radius: 1rem;
+      text-align: center;
+      text-shadow: $text-shadow;
+      font-size: 1.2rem;
+      min-width: 15%;
+      margin: $gap;
+      flex: 1;
+    }
+
+    &.main {
+
+      .card {
+        font-size: 1.4rem;
+        min-width: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    .cards {
+
+      max-width: 90%;
+
+      &, &.main {
+        .card {
+          min-width: 40%;
+        }
+      }
+    }
+  }
+}

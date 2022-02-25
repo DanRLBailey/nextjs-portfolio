@@ -1,13 +1,15 @@
 @import 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 html,
 body {
   background-color: $background-colour;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Questrial', sans-serif;
   color: $font-colour;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
